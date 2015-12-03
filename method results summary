@@ -1,0 +1,20 @@
+feature engineering
+feature selection: greeding
+ensemble: Bayes optimal classifier  Boosting, http://mlwave.com/kaggle-ensembling-guide/
+
+department:
+
+1. random forest 1000 (readtraindata)with department no cv 5.87160
+2. svm: rbf kernel with pca of fineline (traindata_prep -> scc_sv) 2.64223 
+3. etc: 500  with pca 5.51290
+
+
+fineline:
+1. random forest 100, 12
+2. random forest 1000, 
+
+SVM, random forests, extremely randomized trees, neraul network and XGBoost with random parameters and a random subset of base models.
+
+cross-validation
+
+logistic stacking

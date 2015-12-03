@@ -1,0 +1,7 @@
+#cross validation
+	cv = cross_validation.KFold(len(traindata_by_visitnumber),k=5,indices=False)
+	result = []
+	for traincv,testcv in cv:
+		probas = rfc.fit(rfc_traindata[traincv],target[traincv]).predict_proba(rfc_traindata[testcv])
+		results.append( logloss.llfun(target[testcv], [x[1] for x in probas]) )
+		print "Results: " + str( np.array(results).mean() )
